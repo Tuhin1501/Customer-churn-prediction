@@ -42,3 +42,35 @@ y_pred_SMOTEENN_rf = model_rf_SMOTEENN.predict(xs_test)
 print(classification_report(ys_test, y_pred_SMOTEENN_rf, labels = [0,1]))
 filename = 'model.sav'
 pickle.dump(model_Data_SMOTEENN, open(filename, 'wb'))
+
+
+Prediction models:
+  precision    recall  f1-score   support
+
+           0       0.83      0.93      0.87      1040
+           1       0.68      0.45      0.54       367
+
+    accuracy                           0.80      1407
+   macro avg       0.75      0.69      0.71      1407
+weighted avg       0.79      0.80      0.79      1407
+
+with SMOTEENN in decisiontreeclassifier:
+precision    recall  f1-score   support
+
+           0       0.95      0.89      0.92       536
+           1       0.91      0.96      0.94       647
+
+    accuracy                           0.93      1183
+   macro avg       0.93      0.93      0.93      1183
+weighted avg       0.93      0.93      0.93      1183
+
+with SMOTEENN in randomforestclassifier:
+ precision    recall  f1-score   support
+
+           0       0.97      0.90      0.93       533
+           1       0.92      0.97      0.95       640
+
+    accuracy                           0.94      1173
+   macro avg       0.95      0.94      0.94      1173
+weighted avg       0.94      0.94      0.94      1173
+
